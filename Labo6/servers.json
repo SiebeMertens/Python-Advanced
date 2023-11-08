@@ -1,0 +1,23 @@
+[
+    [
+        {
+            "Hostname": "Laptop-Siebe",
+            "ip": "192.168.1.6",
+            "Fabrikant": "Philips"
+        }
+    ],
+    [
+        {
+            "Hostname": "Laptop-Siebe",
+            "ip": "192.168.1.6",
+            "Fabrikant": "Philips"
+        }
+    ],
+    [
+        {
+            "Hostname": "Laptop-Fleur",
+            "ip": "192.168.1.8",
+            "Fabrikant": "AppleInc"
+        }
+    ]
+]
