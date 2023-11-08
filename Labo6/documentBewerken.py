@@ -35,20 +35,29 @@ def apparatenToevoegen():
     
 
 def apparatenVerwijderen():
-    print("Apparaat verwijderen")
-    apparatenTonen()
-    path = 'servers.json'
-    keyElement = input("Voer het ip in van het apparaat dat je wilt verwijderen")
+#     print("Apparaat verwijderen")
+#     apparatenTonen()
+#     path = 'servers.json'
+#     keyElement = input("Voer het ip in van het apparaat dat je wilt verwijderen")
 
-    with open(path, 'r') as json_bestand:
-        data = json.load(json_bestand)
-    if keyElement in data:
-        del data[keyElement]
-        with open(path, 'w') as json_bestand:
-            json.dump(data, json_bestand, indent=4)
-            print(f"Dictionary-element met sleutel '{keyElement}' is verwijderd uit het JSON-bestand.")
-    else:
-        print(f"Dictionary-element met sleutel '{keyElement}' is niet gevonden in het JSON-bestand.")
+#     with open(path, 'r') as json_bestand:
+#         data = json.load(json_bestand)
+#     if keyElement in data:
+#         del data[keyElement]
+#         with open(path, 'w') as json_bestand:
+#             json.dump(data, json_bestand, indent=4)
+#             print(f"Dictionary-element met sleutel '{keyElement}' is verwijderd uit het JSON-bestand.")
+#     else:
+#         print(f"Dictionary-element met sleutel '{keyElement}' is niet gevonden in het JSON-bestand.")
+    with open("servers.json", "r") as servers:
+        data = json.load(servers)
+        teVerwijderen = "192.168.1.6"
+        updateData = [server for server in data if server["ip"] != teVerwijderen]
+    with open("servers.json","w") as servers:
+        json.dump(updateData, servers, indent=4)    
+    
+        
+    
     
 
     

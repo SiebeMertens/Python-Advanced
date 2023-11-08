@@ -7,12 +7,14 @@ def main():
         print("**********************************************")
         keuze = input("1. Voer handtmatig een adress in \n2. Toon de lijst met apparaten\n")
         if keuze == "1":
-            documentBewerken.ping()
+            tools.ping()
         if keuze == "2":
             documentBewerken.apparatenTonen()
             tools.ping()
     elif keuze == "2":
-        logs = open("pinglog.txt")
+        logs = open("pinglog.txt", "r")
+        logscontent = logs.read()
+        print(logscontent)
         
         
         

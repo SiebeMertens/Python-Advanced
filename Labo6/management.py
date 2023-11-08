@@ -1,5 +1,6 @@
 import documentBewerken
 import tools
+import checker
 def main():
     print("manager")
     print("**********************************************")
@@ -26,7 +27,7 @@ def main():
                 case "4":
                     print("*** Voer het ip of hostname van het apparaat in dat je wilt pingen ***")
                     controlleur = True
-                    tools.ping()
+                    checker.main()
                     
         except ValueError:
             print("Waarde is ongeldig, probeer opnieuw")
